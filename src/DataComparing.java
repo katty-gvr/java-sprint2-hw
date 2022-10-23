@@ -3,17 +3,10 @@ import java.util.ArrayList;
 public class DataComparing {
 
     public void compareMonthlyAndYearReports(YearlyReport yearlyReport, ArrayList<MonthlyReport> monthlyReports) {
-        checkReports(yearlyReport, monthlyReports);
         checkIncome(yearlyReport, monthlyReports);
         checkExpenses(yearlyReport, monthlyReports);
     }
 
-    // проверка отчетов на факт считывания
-    public void checkReports(YearlyReport yearlyReport, ArrayList<MonthlyReport> monthlyReports) {
-        if (monthlyReports == null || yearlyReport == null) {
-            System.out.println("Перед сверкой отчета сначала нужно их считать!");
-        }
-    }
     // сверка доходов
    public void checkIncome(YearlyReport yearlyReport, ArrayList<MonthlyReport> monthlyReports) {
        for (int i = 0; i < monthlyReports.size(); i++) {

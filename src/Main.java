@@ -22,12 +22,24 @@ public class Main {
                 yearlyReport = actionsWithReports.getYearlyReport();
                 System.out.println("Считыание годового отчета выполнено.");
             } else if (userInput == 3) {
-                dataComparing.compareMonthlyAndYearReports(yearlyReport, monthlyReports);
-                System.out.println("Сверка отчетов проведена успешно!");
+                if (monthlyReports == null || yearlyReport == null) {
+                    System.out.println("Перед сверкой отчета сначала нужно их считать!");
+                } else {
+                    dataComparing.compareMonthlyAndYearReports(yearlyReport, monthlyReports);
+                    System.out.println("Сверка отчетов проведена успешно!");
+                }
             } else if (userInput == 4) {
-                printInfo.printMonthInfo(monthlyReports);
+                if(monthlyReports == null) {
+                    System.out.println("Перед выводом информации нужно произвести считвание отчета.");
+                } else {
+                    printInfo.printMonthInfo(monthlyReports);
+                }
             } else if (userInput == 5) {
-                printInfo.printYearInfo(yearlyReport);
+                if(yearlyReport == null) {
+                    System.out.println("Перед выводом информации нужно произвести считвание отчета.");
+                } else {
+                    printInfo.printYearInfo(yearlyReport);
+                }
             } else if (userInput == 0) {
                 System.out.println("Программа завершена.");
                 break;
