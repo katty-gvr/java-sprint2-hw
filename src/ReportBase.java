@@ -2,13 +2,11 @@ import java.util.ArrayList;
 
 public class ReportBase {
 
-    ArrayList<Data> report = new ArrayList<>();
-    ArrayList<MonthlyReport> reports = new ArrayList<>();
-    YearlyReport yearlyReport = new YearlyReport();
-
+     ArrayList<MonthlyReport> reports = new ArrayList<>();
 
     public ArrayList<MonthlyReport> getReportsForAllMonths() { // считывание всех месячных отчетов
         int monthNumber = 1;
+        ArrayList<MonthlyReport> reports = new ArrayList<>();
         for (int i = 1; i <= 3; i++) {
             MonthlyReport monthlyReport = new MonthlyReport();
             monthlyReport.dataFromFile = getMonthlyReport("resources/m.20210" + i + ".csv");

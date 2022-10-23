@@ -8,7 +8,7 @@ public class DataComparing {
     }
 
     // сверка доходов
-   public void checkIncome(YearlyReport yearlyReport, ArrayList<MonthlyReport> monthlyReports) {
+   private void checkIncome(YearlyReport yearlyReport, ArrayList<MonthlyReport> monthlyReports) {
        for (int i = 0; i < monthlyReports.size(); i++) {
            MonthlyReport currentMonthReport = monthlyReports.get(i);
             int monthIncome = currentMonthReport.getIncomeOfMonth();
@@ -19,7 +19,7 @@ public class DataComparing {
         }
     }
     // сверка расходов
-    public void checkExpenses(YearlyReport yearlyReport, ArrayList<MonthlyReport> monthlyReports) {
+    private void checkExpenses(YearlyReport yearlyReport, ArrayList<MonthlyReport> monthlyReports) {
         for (int i = 0; i < monthlyReports.size(); i++) {
             MonthlyReport currentMonthReport = monthlyReports.get(i);
             int monthExpense = currentMonthReport.getExpensesOfMonth();
